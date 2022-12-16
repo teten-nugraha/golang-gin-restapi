@@ -62,7 +62,7 @@ func (c *authhandler) Register(ctx *gin.Context) {
 }
 
 // NewAuthController creates a new instance of AuthController
-func NewAuthController(authService service.AuthService, jwtService service.JWTService) AuthHandler {
+func NewAuthHandler(authService service.AuthService, jwtService service.JWTService) AuthHandler {
 	return &authhandler{
 		authService: authService,
 		jwtService:  jwtService,
